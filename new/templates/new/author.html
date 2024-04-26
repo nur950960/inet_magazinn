@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block title%} authory{%endblock%}
+{%block content%}
+<div class="card text-bg-dark">
+    <img src="{{author.image.url}}" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">{{author}}</h5>
+      <p class="card-text">{{author.date_of_birth}}</p>
+      {%for book in books%}
+      <p class="card-text"><small>{{book}}</small></p>
+      {%endfor%}
+    </div>
+  </div>
+
+{%endblock%}
